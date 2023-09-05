@@ -10,8 +10,15 @@ import {
 // import Main from './Main'
 import Main from './views/Main';
 import Update from './views/Update';
+import Home from './components/Home'
+// import './App.css'
+
+
 import CreateProject from './components/CreateProject'
 import Dashboard from './components/Dashboard'
+import LoginPage from './components/LoginPage'
+import SignUpPage from './components/SignUpPage'
+import UserList from './components/UersList';
 function App() {
   return (
     <div className="App">
@@ -22,8 +29,12 @@ function App() {
       {/* <Chatapp /> */}
       <Routes>
         {/* <CreateProject path="/new" /> */}
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignUpPage />} />
+        <Route path="/getallusers" element={<UserList />} />
         <Route path="/new" element={<CreateProject />} />
         <Route path="/" element={<Dashboard />} />
+        <Route path="/home" element={<Home />} />
         {/* <Dashboard path="/" /> */}
       </Routes>
     </div>
